@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class WelcomeComponent implements OnInit {
 
   appName = '';
-  name = "nobody";
+  name = '';
 
   @Input() header = '';
   @Input() message = '';
@@ -21,13 +21,13 @@ export class WelcomeComponent implements OnInit {
 
 
   /* https://www.guru99.com/angularjs-controller.html */
-  tutoriaName() {
+  tutorialName() {
  
     return "Angular JS";
   }
 
   ngOnInit(): void {
-    this.appName = this.tutoriaName();
+    this.appName = this.tutorialName();
   }
 
 }
