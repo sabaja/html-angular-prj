@@ -8,13 +8,36 @@
 		<p>Inserisci il tuo nome:
 			<input type="text" [(ngModel)]="name">
 		</p>
-		<p>Hello {{ name }}!</p>
+		<p>Hello {{ name }} motherfu@#*r</p>
 	</div>
 	<label ng-controller="WelcomeController" (ngModel)="appName">
-	{{ appName }}</label>
+		{{ appName }}</label>
 
-	<p><label ng-controller="WelcomeController" >
-	{{ tutorialName() }}</label> </p>
+	<p><label ng-controller="WelcomeController">
+			{{ tutorialName() }}</label> </p>
+
+	<div ng-controller="WelcomeController">
+		<ul>
+			<li>{{ element.a}}</li>
+			<li>{{ element.b}}</li>
+			<li>{{ element.obj.definition}}</li>
+			<li>{{ element.obj.err}}</li>
+		</ul>
+
+		<p>{{myDate}}</p>
+	</div>
+	<div ng-controller="welcomeController">
+		I have {{friends.length}} friends. They are:
+		<input type="search" placeholder="filter friends..." aria-label="filter friends" />
+		<ul class="example-animate-container">
+		  <li class="animate-repeat" *ngFor="let friend of friends; let i = index">	
+			  [{{i + 1}}] {{friend.name}} who is {{friend.age}} years old.
+		  </li>
+		  <li class="animate-repeat" ng-if="results.length === 0">
+			<strong>No results found...</strong>
+		  </li>
+		</ul>
+	  </div>
 </body>
 
 </html>
